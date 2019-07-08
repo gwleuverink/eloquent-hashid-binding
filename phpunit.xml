@@ -28,14 +28,7 @@
     </logging>
     <php>
         <env name="APP_KEY" value="base64:kmQ6ZPyUt5NYQy0JMbp+y8zGmK+rvBzeKxQTNX/JyQI="/>
-        <!--
         <env name="DB_CONNECTION" value="sqlite"/>
         <env name="DB_DATABASE" value=":memory:"/>
-        -->
-        <env name="DB_CONNECTION" value="mysql"/>
-        <env name="DB_DATABASE" value="test_db"/>
-        <env name="DB_HOST" value="192.168.10.10"/>
-        <env name="DB_USERNAME" value="homestead"/>
-        <env name="DB_PASSWORD" value="secret"/>
     </php>
 </phpunit>

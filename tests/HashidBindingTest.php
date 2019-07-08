@@ -16,7 +16,7 @@ class HashidBindingTest extends TestCase
 
         // Create a table for testing
         DB::statement("DROP TABLE IF EXISTS hashid_binding_test;");
-        DB::statement("CREATE TABLE hashid_binding_test (id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY);");
+        DB::statement("CREATE TABLE hashid_binding_test (id INTEGER PRIMARY KEY AUTOINCREMENT);");
 
         // Register a test route
         Route::middleware('web')
@@ -32,10 +32,6 @@ class HashidBindingTest extends TestCase
     /** @test */
     public function it_resolves_a_model_instance_with_route_binding()
     {
-        // FIXME: Doesn't work as expected. False positive.
-        // Key is decoded as expected, but the resolveRouteBinding method does not return any results
-        // (even tough a fresh model was saved in the setUp method)
-        // Could it have something to do with sqlLite??
         $encodedKey = $this->model->encodedRouteKey;
         
         $response = $this->get(route('test-route', $encodedKey));
@@ -44,9 +40,7 @@ class HashidBindingTest extends TestCase
     }
 
     
-    /**
-     * @test
-     */
+    /** @test */
     public function it_throws_not_found_exception_when_resolving_by_id()
     {
         $key = $this->model->id;
@@ -56,9 +50,7 @@ class HashidBindingTest extends TestCase
         $response->assertNotFound();
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function it_throws_not_found_exception_exception_when_the_key_could_not_be_decoded()
     {
         $response = $this->get(route('test-route', 'this-will-surely-fail-to-decode'));
@@ -83,7 +75,7 @@ class HashidBindingTest extends TestCase
     }
 
     /** @test */
-    function it_generates_expected_url_with_encoded_key_using_the_route_helper()
+    public function it_generates_expected_url_with_encoded_key_using_the_route_helper()
     {
         $routeKey = $this->model->encodedRouteKey;
         $generatedUrl = route('test-route', $this->model);
