@@ -3,6 +3,7 @@
 namespace Leuverink\HashidBinding;
 
 use Hashids\HashidsInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class HashidService
 {
@@ -32,6 +33,11 @@ class HashidService
      */
     public function decode($hashid)
     {
-        return $this->hashids->decode($hashid)[0];
+        if (! $hashArray = $this->hashids->decode($hashid)) {
+            // The hash could not be decoded.
+            throw new NotFoundHttpException(); // TODO: It might be better to change this into a ModelNotFoundException?
+        }
+        
+        return $hashArray[0];
     }
 }

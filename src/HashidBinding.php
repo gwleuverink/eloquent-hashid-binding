@@ -28,12 +28,7 @@ trait HashidBinding
     public function resolveRouteBinding($hashid)
     {
         $hashidService = resolve(\Leuverink\HashidBinding\HashidService::class);
-
-        // Prevent empty string to be inserted in query
-        if (! $decodedKey = $hashidService->decode($hashid)) {
-            // TODO: Create a dedicated exception class or use RuntimeException?
-            throw new \Exception('Unable to decode route key');
-        }
+        $decodedKey = $hashidService->decode($hashid);
 
         return $this->where($this->getRouteKeyName(), $decodedKey)->first();
     }
