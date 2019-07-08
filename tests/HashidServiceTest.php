@@ -34,7 +34,7 @@ class HashidServiceTest extends TestCase
     /** @test */
     public function it_returns_a_encoded_string_with_configured_length()
     {
-        $expectedLength = $this->app->config->get('hashid-binding.length');
+        $expectedLength = $this->app->config->get('hashid-binding.min_length');
         $encodedValue = $this->service->encode(1, TestModel::class);
 
         $this->assertEquals($expectedLength, strlen($encodedValue));

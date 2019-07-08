@@ -23,7 +23,7 @@ class ServiceProvider extends BaseServiceProvider
         // Register implementations
         $this->app->singleton(HashidService::class, function ($app) {
             $saltModifier = $app->config->get('hashid-binding.salt');
-            $padding = $app->config->get('hashid-binding.length');
+            $padding = $app->config->get('hashid-binding.min_length');
 
             $transcoder = new TranscoderFactory(Hashids::class, $saltModifier, $padding);
 
