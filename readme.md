@@ -1,5 +1,5 @@
 <p align="center">
-    <img src=".github/open-graph-logo.png" width="660">
+    <img src=".github/package-logo.png" width="500">
 </p>
 
 <p align="center">
