@@ -3,7 +3,6 @@
 namespace Leuverink\HashidBinding;
 
 use Hashids\Hashids;
-use Leuverink\HashidBinding\TranscoderFactory;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -12,15 +11,15 @@ class ServiceProvider extends BaseServiceProvider
     {
         // Publish config
         $this->publishes([
-             __DIR__ . '/../config/hashid-binding.php' => base_path('config/hashid-binding.php'),
+             __DIR__.'/../config/hashid-binding.php' => base_path('config/hashid-binding.php'),
         ], 'hashid-binding');
     }
 
     public function register()
     {
         // Merge config
-        $this->mergeConfigFrom(__DIR__ . '/../config/hashid-binding.php', 'hashid-binding');
-        
+        $this->mergeConfigFrom(__DIR__.'/../config/hashid-binding.php', 'hashid-binding');
+
         // Register implementations
         $this->app->singleton(HashidService::class, function ($app) {
             $saltModifier = $app->config->get('hashid-binding.salt');
