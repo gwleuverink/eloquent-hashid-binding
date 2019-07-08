@@ -1,8 +1,4 @@
 <p align="center">
-    <img src="docs/assets/package-logo.png" width="500">
-</p>
-
-<p align="center">
     <a href="https://travis-ci.org/gwleuverink/eloquent-hashid-binding"><img src="https://travis-ci.org/gwleuverink/eloquent-hashid-binding.svg?branch=master" alt="Build Status"></a>
     <a href='https://coveralls.io/github/gwleuverink/eloquent-hashid-binding?branch=master'><img src='https://coveralls.io/repos/github/gwleuverink/eloquent-hashid-binding/badge.svg?branch=master' alt='Coverage Status' /></a>
     <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/v/stable.svg" alt="Latest Stable Version"></a>
@@ -10,18 +6,16 @@
     <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/license.svg" alt="License"></a>
 </p>
 
-<p align="center">
-    A drop in solution for eloquent implicit route model binding with hashid's. 
-    <br />
-    Obfuscate your app's id's for prying eyes.
-</p>
-
+---
+**NOTE**
+The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need of migrations.
+---
 
 ## Installation
 
 `composer require leuverink\eloquent-hashid-binding`
 
-## Basic usage
+## Usage
 
 Simply use the HashidBinding trait in your eloquent model and you're good to go!
 
@@ -39,7 +33,4 @@ class User extends Authenticatable
 }
 ```
 
----
-**NOTE**
-The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need of migrations.
----
+That's it!
