@@ -45,6 +45,6 @@ Check out [the docs](https://gwleuverink.github.io/eloquent-hashid-binding/) for
 ---
 **NOTE**
 
-The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need of migrations.
+The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need for migrations.
 
 ---
