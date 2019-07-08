@@ -1,10 +1,9 @@
 <?php
+
 namespace Leuverink\HashidBinding\Tests;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-use Leuverink\HashidBinding\Tests\TestCase;
-use Leuverink\HashidBinding\Tests\TestModel;
 
 class HashidBindingTest extends TestCase
 {
@@ -15,8 +14,8 @@ class HashidBindingTest extends TestCase
         parent::setUp();
 
         // Create a table for testing
-        DB::statement("DROP TABLE IF EXISTS hashid_binding_test;");
-        DB::statement("CREATE TABLE hashid_binding_test (id INTEGER PRIMARY KEY AUTOINCREMENT);");
+        DB::statement('DROP TABLE IF EXISTS hashid_binding_test;');
+        DB::statement('CREATE TABLE hashid_binding_test (id INTEGER PRIMARY KEY AUTOINCREMENT);');
 
         // Register a test route
         Route::middleware('web')
@@ -28,23 +27,21 @@ class HashidBindingTest extends TestCase
         $this->model = TestModel::create();
     }
 
-
     /** @test */
     public function it_resolves_a_model_instance_with_route_binding()
     {
         $encodedKey = $this->model->encodedRouteKey;
-        
+
         $response = $this->get(route('test-route', $encodedKey));
 
         $response->assertOk();
     }
 
-    
     /** @test */
     public function it_throws_not_found_exception_when_resolving_by_id()
     {
         $key = $this->model->id;
-        
+
         $response = $this->get(route('test-route', $key));
 
         $response->assertNotFound();

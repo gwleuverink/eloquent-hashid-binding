@@ -2,8 +2,6 @@
 
 namespace Leuverink\HashidBinding;
 
-use Leuverink\HashidBinding\HashidService;
-
 trait HashidBinding
 {
     public function initializeHashidBinding()
@@ -35,7 +33,7 @@ trait HashidBinding
     }
 
     /**
-     * Generate an encoded route key value
+     * Generate an encoded route key value.
      *
      * @return void
      */
