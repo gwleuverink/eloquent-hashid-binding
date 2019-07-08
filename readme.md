@@ -26,7 +26,6 @@ use Leuverink\HashidBinding\HashidBinding;
 
 class User extends Authenticatable
 {
-    use Notifiable;
     use HashidBinding;
 
     //
