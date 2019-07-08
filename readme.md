@@ -1,4 +1,4 @@
-# Eloquent Hashid binding
+<h1 align="center">Eloquent Hashid binding</h1>
 
 <p align="center">
     <b>Still under construction!</b>
@@ -18,7 +18,7 @@
 
 ## Basic usage
 
-Simply require the HashidBinding trait in your eloquent model and you're good to go!
+Simply use the HashidBinding trait in your eloquent model and you're good to go!
 
 ``` php
 namespace App;
