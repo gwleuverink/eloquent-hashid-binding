@@ -1,6 +1,8 @@
 # Eloquent Hashid binding
 
 <p align="center">
+    <b>Still under construction!</b>
+    <br />
     A drop in solution for eloquent implicit route model binding with hashid's. 
     <br />
     Obfuscate your app's id's for prying eyes.
