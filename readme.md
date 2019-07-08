@@ -39,6 +39,8 @@ class User extends Authenticatable
 }
 ```
 
+That's it!
+Check out [the docs](https://gwleuverink.github.io/eloquent-hashid-binding/) for more information.
 ---
 **NOTE**
 

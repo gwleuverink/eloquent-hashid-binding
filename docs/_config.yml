@@ -1,0 +1,10 @@
+theme: jekyll-theme-minimal
+
+#Setup
+title: Eloquent Hashid binding
+description: A drop in solution for eloquent implicit route model binding with hashid's
+
+# About/contact
+author:
+  name: Willem Leuverink
+  url: https://leuver.ink
