@@ -1,5 +1,5 @@
 {
-    "name": "leuverink/laravel-hashid-binding",
+    "name": "leuverink/eloquent-hashid-binding",
     "description": "A drop in solution for eloquent route model binding with hashid's",
     "minimum-stability": "stable",
     "type": "library",
