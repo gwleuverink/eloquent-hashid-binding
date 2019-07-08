@@ -37,5 +37,9 @@
                 "Leuverink\\HashidBinding\\ServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "test-coverage": "./vendor/bin/phpunit --coverage-html build/reports"
     }
 }
