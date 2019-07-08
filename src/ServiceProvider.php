@@ -25,7 +25,7 @@ class ServiceProvider extends BaseServiceProvider
             $salt = $app->config->get('hashid-binding.salt');
             $padding = $app->config->get('hashid-binding.length');
 
-            return new HashidService(new Hashids($salt, $padding));
+            return new HashidService($salt, $padding);
         });
     }
 }

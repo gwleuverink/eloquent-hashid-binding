@@ -28,7 +28,7 @@ trait HashidBinding
     public function resolveRouteBinding($hashid)
     {
         $hashidService = resolve(\Leuverink\HashidBinding\HashidService::class);
-        $decodedKey = $hashidService->decode($hashid);
+        $decodedKey = $hashidService->decode($hashid, __CLASS__);
 
         return $this->where($this->getRouteKeyName(), $decodedKey)->first();
     }
@@ -42,6 +42,6 @@ trait HashidBinding
     {
         $hashidService = resolve(\Leuverink\HashidBinding\HashidService::class);
 
-        return $hashidService->encode(parent::getRouteKey());
+        return $hashidService->encode(parent::getRouteKey(), __CLASS__);
     }
 }
