@@ -1,6 +1,11 @@
-<h1 align="center">Eloquent Hashid binding</h1>
-
-<p align="center"><img src=".github/open-graph-logo.png"></p>
+<p align="center">
+    <img src=".github/open-graph-logo.png">
+    <a href="https://travis-ci.org/gwleuverink/eloquent-hashid-binding"><img src="https://travis-ci.org/gwleuverink/eloquent-hashid-binding.svg?branch=master" alt="Build Status"></a>
+    <a href='https://coveralls.io/github/gwleuverink/eloquent-hashid-binding?branch=master'><img src='https://coveralls.io/repos/github/gwleuverink/eloquent-hashid-binding/badge.svg?branch=master' alt='Coverage Status' /></a>
+    <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/v/stable.svg" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/v/unstable.svg" alt="Latest Unstable Version"></a>
+    <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/license.svg" alt="License"></a>
+</p>
 
 <p align="center">
     <b>Still under construction!</b>
@@ -10,13 +15,6 @@
     Obfuscate your app's id's for prying eyes.
 </p>
 
-<p align="center">
-    <a href="https://travis-ci.org/gwleuverink/eloquent-hashid-binding"><img src="https://travis-ci.org/gwleuverink/eloquent-hashid-binding.svg?branch=master" alt="Build Status"></a>
-    <a href='https://coveralls.io/github/gwleuverink/eloquent-hashid-binding?branch=master'><img src='https://coveralls.io/repos/github/gwleuverink/eloquent-hashid-binding/badge.svg?branch=master' alt='Coverage Status' /></a>
-    <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/v/stable.svg" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/v/unstable.svg" alt="Latest Unstable Version"></a>
-    <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/license.svg" alt="License"></a>
-</p>
 
 ## Installation
 
