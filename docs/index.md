@@ -10,6 +10,7 @@
 **NOTE**
 
 The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need of migrations.
+
 ---
 
 ## Installation
