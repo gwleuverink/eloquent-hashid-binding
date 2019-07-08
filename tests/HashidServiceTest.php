@@ -3,7 +3,6 @@
 namespace Leuverink\HashidBinding\Tests;
 
 use Leuverink\HashidBinding\HashidService;
-use Leuverink\HashidBinding\Tests\TestModel;
 
 class HashidServiceTest extends TestCase
 {

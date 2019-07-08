@@ -2,5 +2,5 @@
 
 return [
     'salt' => env('HASHID_BINDING_SALT', config('app.key')),
-    'length' => env('HASHID_BINDING_LENGTH', 5)
+    'length' => env('HASHID_BINDING_LENGTH', 5),
 ];
