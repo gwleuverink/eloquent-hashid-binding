@@ -1,5 +1,7 @@
 <h1 align="center">Eloquent Hashid binding</h1>
 
+<p align="center"><img src=".github/open-graph-logo.png"></p>
+
 <p align="center">
     <b>Still under construction!</b>
     <br />
