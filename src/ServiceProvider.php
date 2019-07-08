@@ -2,8 +2,9 @@
 
 namespace Leuverink\HashidBinding;
 
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Hashids\Hashids;
+use Leuverink\HashidBinding\TranscoderFactory;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
@@ -19,13 +20,15 @@ class ServiceProvider extends BaseServiceProvider
     {
         // Merge config
         $this->mergeConfigFrom(__DIR__ . '/../config/hashid-binding.php', 'hashid-binding');
-
+        
         // Register implementations
         $this->app->singleton(HashidService::class, function ($app) {
-            $salt = $app->config->get('hashid-binding.salt');
+            $saltModifier = $app->config->get('hashid-binding.salt');
             $padding = $app->config->get('hashid-binding.length');
 
-            return new HashidService($salt, $padding);
+            $transcoder = new TranscoderFactory(Hashids::class, $saltModifier, $padding);
+
+            return new HashidService($transcoder);
         });
     }
 }
