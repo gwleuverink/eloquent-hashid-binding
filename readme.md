@@ -55,7 +55,7 @@ $model->encoded_route_key;
 
 ## Customisation
 ### Salt
-By default this package salts route keys using the app key. If you'd like to change this behaviour, for example when yo use a rotating app key, simply add `HASHID_BINDING_SALT` to your environment file.
+By default this package salts route keys the model's fully qualified class name combined with your app key. If you'd like to change this behaviour, for example when you use a rotating app key, simply add `HASHID_BINDING_SALT` to your environment file.
 
 ### Hashid length
 The default length for encoded route keys is five characters. This can be changed by adding *(int)* `HASHID_BINDING_LENGTH` to your environment file.
@@ -63,3 +63,12 @@ The default length for encoded route keys is five characters. This can be change
 ### Publishing the package config
 By default all settings can be changed using environment variables. If you have the need to do this via a config file this is possible also. Simply run the following command:
 `php artisan vendor:publish --tag"hashid-binding"` and make your changes there.
+
+# Contributing
+I consider this package pretty much feature complete. Any contributions concerning bugfixes, documentation or allround great ideas are more than welcome. Please open up an issue and discuss.
+
+## Getting it running
+Clone this repository and `composer install`
+
+## Running tests
+Run `composer test` to run the suite. Alternatively run `composer test-coverage` to also generate a full coverage report inside `build/reports`
