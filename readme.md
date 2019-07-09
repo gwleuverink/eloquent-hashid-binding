@@ -19,7 +19,7 @@
 
 ## Installation
 
-`composer require leuverink\eloquent-hashid-binding`
+`composer require leuverink/eloquent-hashid-binding`
 
 ## Basic usage
 

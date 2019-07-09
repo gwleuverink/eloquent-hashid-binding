@@ -15,7 +15,7 @@ The hashid route keys are encoded/decoded on the fly. You can drop this in any p
 
 ## Installation
 
-`composer require leuverink\eloquent-hashid-binding`
+`composer require leuverink/eloquent-hashid-binding`
 
 ## Usage
 
