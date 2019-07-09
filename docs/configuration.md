@@ -1,9 +1,9 @@
 ## Configuration
 
 ### Salt
-By default this package salts route keys the model's fully qualified class name combined with your app key. If you'd l]ike to change this behaviour, for example when you use a rotating app key, simply add `HASHID_BINDING_SALT` to your environment file.
+By default this package salts route keys the model's fully qualified class name combined with your app key. If you'd like to change this, for example when you use a rotating app key, simply add `HASHID_BINDING_SALT` to your environment file. The FQCN is still added to the salt for uniqueness.
 
-### Minimom key length
+### Minimum key length
 The default minimum length for encoded route keys is five characters. This can be changed by adding *(int)* `HASHID_BINDING_MIN_LENGTH` to your environment file.
 
 ### Publishing the package config
