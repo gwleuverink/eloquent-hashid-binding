@@ -16,6 +16,13 @@
     Obfuscate your app's id's for prying eyes.
 </p>
 
+## What this package does
+This package obfuscates eloquent model's id's when used in url's. This is really usefull when you don't want to expose id's to the outside world.
+
+| **EXAMPLE** |                           |
+| ----------- | ------------------------- |
+| Before      | `domain.test/users/1`     |
+| After       | `domain.test/users/rvBVv` |
 
 ## Installation
 

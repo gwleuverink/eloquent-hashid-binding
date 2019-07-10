@@ -6,6 +6,14 @@
     <a href="https://packagist.org/packages/leuverink/eloquent-hashid-binding"><img src="https://poser.pugx.org/leuverink/eloquent-hashid-binding/license.svg" alt="License"></a>
 </p>
 
+## What this package does
+This package obfuscates eloquent model's id's when used in url's. This is really usefull when you don't want to expose id's to the outside world.
+
+| **EXAMPLE** |                           |
+| ----------- | ------------------------- |
+| Before      | `domain.test/users/1`     |
+| After       | `domain.test/users/rvBVv` |
+
 ---
 **NOTE**
 
