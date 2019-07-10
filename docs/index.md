@@ -11,7 +11,7 @@
 
 The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need for migrations.
 
-Obfuscated id's are Unique for each model. So id 1 for App\User is encoded to a different string than id one for a different model.
+Obfuscated id's are Unique for each model. So id 1 for App\User is encoded to a different string than id 1 for a different model.
 
 ---
 
