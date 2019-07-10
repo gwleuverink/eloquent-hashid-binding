@@ -18,7 +18,10 @@
 
 <br />
 
-### What this package does
+---
+
+***What this package does***
+
 This package obfuscates eloquent model's id's when used in url's. This is really usefull when you don't want to expose id's to the outside world.
 
 | **EXAMPLE** |                           |
