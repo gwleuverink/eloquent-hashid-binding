@@ -24,6 +24,8 @@
 
 This package obfuscates eloquent model's id's when used in url's. This is really usefull when you don't want to expose id's to the outside world.
 
+The route keys are encoded/decoded on the fly. You can drop this in any Laravel project without the need for migrations.
+
 | **EXAMPLE** |                           |
 | ----------- | ------------------------- |
 | Before      | `domain.test/users/1`     |
