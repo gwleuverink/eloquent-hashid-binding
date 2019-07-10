@@ -56,10 +56,3 @@ class User extends Authenticatable
 
 That's it!
 Check out [the docs](https://gwleuverink.github.io/eloquent-hashid-binding/) for more information.
-
----
-**NOTE**
-
-The hashid route keys are encoded/decoded on the fly. You can drop this in any project without the need for migrations.
-
----
