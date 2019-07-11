@@ -14,7 +14,7 @@ class TranscoderFactory
     protected $transcoder;
 
     /**
-     * An unique string the trnascoder's salt is appended with.
+     * An unique string the transcoder's salt is appended with.
      *
      * @var string
      */
@@ -37,8 +37,9 @@ class TranscoderFactory
     /**
      * Creates a new transcoder instance.
      *
-     * @param string $salt
+     * @param string  $salt
      * @param padding $padding
+     *
      * @return HashidsInterface
      */
     public function create($salt): HashidsInterface
