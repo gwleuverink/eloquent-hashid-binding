@@ -10,7 +10,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-             __DIR__.'/../config/hashid-binding.php' => base_path('config/hashid-binding.php'),
+            __DIR__.'/../config/hashid-binding.php' => base_path('config/hashid-binding.php'),
         ], 'hashid-binding');
     }
 
