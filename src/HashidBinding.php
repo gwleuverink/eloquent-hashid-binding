@@ -20,12 +20,13 @@ trait HashidBinding
     }
 
     /**
-     * Retrieve the model for a bound encoded value.
+     * Retrieve the model for a bound value.
      *
      * @param  mixed  $value
+     * @param  string|null  $field
      * @return \Illuminate\Database\Eloquent\Model|null
      */
-    public function resolveRouteBinding($hashid)
+    public function resolveRouteBinding($hashid, $field = null)
     {
         $decodedKey = resolve(HashidService::class)->decode($hashid, __CLASS__);
 
